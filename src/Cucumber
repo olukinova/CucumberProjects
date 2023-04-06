@@ -1,0 +1,24 @@
+Components of Cucumber:
+- Features file (responsible for supporting BDD components with the help of Gherkin language)
+- Step Definition (here we write a corresponding code)
+- Test Runner
+
+Options:
+1. features - maps where feature files are located in our framework
+2. glue - maps where class files are located in our framework
+3. dryRun = true - checks for every step in feature file, corresponding code is written or not; if not,
+it will autogenerate the missing piece of code, BUT test cases will not execute!!!!
+4. dryRun = false - in this case test cases will be executed
+
+Common methods:
+- opening browser
+- closing browser
+
+Hard Coded values:
+- URL
+- user name
+- password
+- browser type
+
+Constants:
+- wait time
