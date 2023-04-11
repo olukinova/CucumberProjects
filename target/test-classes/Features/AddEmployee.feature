@@ -9,3 +9,4 @@ Feature: Employee
     Then user clicks on Add Employee option
     And user enters firstname and middlename and lastname
     #And user clicks on Save button
+    And Close the browser

@@ -19,6 +19,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Login extends CommonMethods {
 
+    // After adding hooks code for opening browser can be commented or deleted
     @Given("open the browser and launch HRMS application")
     public void open_the_browser_and_launch_hrms_application() {
        openBrowserAndLaunchApplication();
@@ -52,8 +53,20 @@ public class Login extends CommonMethods {
       }
     }
 
+
+    // After adding hooks code for closing browser can be commented or deleted
     @Then("Close the browser")
     public void close_the_browser() {
       closeBrowser();
+    }
+
+    @When("user enters valid {string} and valid {string}")
+    public void user_enters_valid_and_valid(String username, String password) {
+
+        WebElement userNameTextBox = driver.findElement(By.xpath("//input[@id='txtUsername']"));
+        sendKeys(userNameTextBox, username);
+
+        WebElement userPasswordTextBox = driver.findElement(By.xpath("//input[@id='txtPassword']"));
+        sendKeys(userPasswordTextBox, password);
     }
 }
