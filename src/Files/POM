@@ -1,0 +1,8 @@
+Page object model is an object repository
+POM stores or holds all the web elements specific to a particular page
+
+1. Every Page object class should extend CommonMethods class
+2. Define Web Elements (they should be public) using P@FindBy annotation
+3. Initialize all web elements by creating a public constructor on the current page (PageFactory)
+
+In a step definition file you have to create object of this Page Object class

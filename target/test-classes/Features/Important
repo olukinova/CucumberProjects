@@ -1,8 +1,0 @@
- Press cmnd and hover over each scenario step, it will turn on the link + the
- enlightenment will be removed if all steps are coded
- Using the link you will be able to travel to the piece of code for each step definition
-
- +++
-
- You can go vice versa: press cmnd and hover over method name in StepDefinitions class and then you will
- go to the corresponding feature step

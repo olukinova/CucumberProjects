@@ -35,14 +35,25 @@ Feature: Login Functionalities
 
   # Scenario outline is always used with the keyword "Examples"
   @ScenarioOutline
-   Scenario Outline:
+   Scenario Outline: Login with multiple credentials using scenario outline
     # Given open the browser and launch HRMS application - this step was commented because now it is managed by hooks
      When user enters valid "<username>" and valid "<password>"
      And click on login button
      Then user is logged in successfully
-    # And Close the browser this step was commented because now it is managed by hooks
+    # And Close the browser this - step was commented because now it is managed by hooks
    Examples:
      | username | password    |
      | admin    | Hum@nhrm123 |
      | ADMIN    | Hum@nhrm123 |
      | Jason    | Hum@nhrm123 |
+
+    # Data table does the same thing that scenario outline does
+    # BUT it offers you more functionality comparing to s/o
+
+  @dataTable
+  Scenario: Login with multiple credentials using data table
+    When user enters username and password and verifies login
+      | username | password    |
+      | admin    | Hum@nhrm123 |
+      | ADMIN    | Hum@nhrm123 |
+      | Jason    | Hum@nhrm123 |

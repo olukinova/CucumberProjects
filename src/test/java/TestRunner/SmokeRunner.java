@@ -13,10 +13,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 @CucumberOptions(features = "src/test/resources/Features",
         glue = "StepDefinitions",
         dryRun = false,
-        tags = "@smoke2",
-        plugin = {"pretty"})
+        tags = "@testcase2",
+        plugin = {"pretty", "html:target/Cucumber.html", "json:target/Cucumber.json"})
 // tags option execute the tagged testcase as mentioned in your runner class
 
 public class SmokeRunner {
 
 }
+
+// target folder is mostly used for storing test case execution reports generated using cucumber
+// we can generate html, json, xml report

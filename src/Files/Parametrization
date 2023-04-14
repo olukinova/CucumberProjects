@@ -1,0 +1,34 @@
+***Data-Driven Testing in Cucumber***
+
+This is very often required in any automated test to pass data or to use the same test again with
+different data set. And the good part is that the Cucumber inherently supports Data Driven Testing
+using Scenario Outline. There are different ways to use the data insertion within the Cucumber and
+outside the Cucumber with external files.
+
+1. Parameterization without Example Keyword - Cucumber expression
+Data-Driven Testing in Cucumber using Scenario Outline
+DrawBacks: changes need to be done in java file
+
+2. Parameterization with Example Keyword using scenario outline (Need to update the Statement in the feature file, which
+tells Cucumber to enter username & Password)
+This uses Example keyword to define the test data for the Scenario
+This works for the whole test
+Cucumber automatically run the complete test the number of times equal to the number of data
+in the Test Set
+
+
+3. Parameterization using data Tables
+Drawbacks: you need to update java file with for loop to run each step
+No keyword is used to define the test data
+This works only for the single step, below which it is defined
+
+4. Data-Driven Testing in Cucumber using External Files
+Parameterization using Excel Files
+Parameterization using Json
+Parameterization using XML
+
+Scenario Outline - This is used to run the same scenario for 2 or more different sets of test data.
+E.g. In our scenario, if you want to register another user you can data drive the same scenario twice.
+
+Examples - All scenario outlines have to be followed with the Examples section.
+This contains the data that has to be passed on to the scenario.
