@@ -3,16 +3,32 @@ package StepDefinitions;
 import Utils.CommonMethods;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 
 public class Hooks extends CommonMethods {
     @Before
     public void preConditions () {
         openBrowserAndLaunchApplication();
     }
+
+
+    // Scenario class holds the complete information of your test execution in Cucumber framework
     @After
-    public void postConditions () {
-        // here you can write a code to make a screenshot
+    public void postConditions (Scenario scenario) {
+        byte[] pic;
+        if(scenario.isFailed()) {
+            pic = takeScreenshot("failed/" + scenario.getName());
+        } else {
+            pic = takeScreenshot("passed/" + scenario.getName());
+        }
+
+        // now we have to attach screenshots to our reports
+        scenario.attach(pic, "image/png", scenario.getName());
+
+
+
         closeBrowser();
-        // here can be the code to generate a report, that's why hooks are useful
+
+
     }
 }

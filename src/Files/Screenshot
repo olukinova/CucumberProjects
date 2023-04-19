@@ -1,0 +1,4 @@
+1. Add dependency - commons.io
+2. Write 2 methods for taking screenshot - see common methods
+3. In hooks add this methods to the @Before hook before close browser() method
+4. Attach screen shot to the reports
