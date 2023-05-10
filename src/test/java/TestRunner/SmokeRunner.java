@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 @CucumberOptions(features = "src/test/resources/Features",
         glue = "StepDefinitions",
         dryRun = false,
-        tags = "@testcase2",
+       // tags = "@testcase2",
         plugin = {"pretty", "html:target/Cucumber.html", "json:target/Cucumber.json", "rerun:target/failed.txt"})
 // tags option execute the tagged testcase as mentioned in your runner class
 

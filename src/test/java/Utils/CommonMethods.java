@@ -27,7 +27,6 @@ public class CommonMethods extends PageInitializer {
 
     public static void openBrowserAndLaunchApplication() {
 
-
         String browserType = ConfigReader.getPropertyValue("browserType");
         switch (browserType) {
 

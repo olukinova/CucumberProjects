@@ -24,4 +24,13 @@ THIS QUESTION IS VERY FREQUENTLY ASKED DURING THE INTERVIEW
 8. Site
 Generates documentation for the project
 9. Deploy
-Copies thi final package to remote repo for sharing with other Devs
+Copies  thi final package to remote repo for sharing with other Devs
+
+===============MAVEN INSTALLATION======================
+FOR MAC USERS
+
+https://mkyong.com/maven/install-maven-on-mac-osx/
+https://www.youtube.com/watch?v=N2aB69xoA3M
+
+Enter command brew install maven in terminal
+
