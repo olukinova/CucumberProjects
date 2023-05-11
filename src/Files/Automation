@@ -1,4 +1,14 @@
 Which things we need to automate backend:
 - address of the database;
 - proper name of a database;
-- access to the database
+- access to the database (user credentials)
+
+Connection class - to establish connection to DB
+Make a statement - it allows us to send the query to the DB
+Resultest - the result will be stored in this object
+rset.next() - to shift the cursor on to the next line
+Resultmetadata - it will give you the information of the entire result such as
+how many columns are there, how many rows are there, names of columns, names of rows etc.
+
+
+
