@@ -6,7 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-public class BDUtility {
+public class DBUtility {
 
     static Connection connection = null;
     static Statement statement = null;
@@ -71,9 +71,9 @@ public class BDUtility {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            BDUtility.closeResult(rset);
-            BDUtility.closeStatement(statement);
-            BDUtility.closeConnection(connection);
+            DBUtility.closeResult(rset);
+            DBUtility.closeStatement(statement);
+            DBUtility.closeConnection(connection);
         }
         return  listFromSet;
     }
