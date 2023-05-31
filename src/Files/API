@@ -1,0 +1,2 @@
+In Postman: base URI = base URL + endpoint
+In REST Assured: base URI = base URL

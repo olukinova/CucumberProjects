@@ -38,7 +38,12 @@ public class DBUtility {
     public static  ResultSetMetaData getRsetMetadata (String query) {
 
         rset = getResultSet(query);
-        rsetMetadata = null; // we're making it as null since
+        rsetMetadata = null; // The reason for initializing it to null is to ensure that the variable starts
+        // with no assigned value before we attempt to retrieve the metadata from the result set.
+        // Initializing rsetMetadata to null is a common practice when declaring variables that are later assigned
+        // values within a try-catch block or conditional statements. It ensures that the variable is in a valid
+        // initial state and helps prevent potential issues with accessing uninitialized variables.
+
         // we use this line to get the data in tabular format so that we can use these
         // in column keys and values for retrieval operation
         try {
