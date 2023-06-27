@@ -8,6 +8,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -31,7 +32,14 @@ public class CommonMethods extends PageInitializer {
         switch (browserType) {
 
             case "Chrome":
-                driver = new ChromeDriver();
+                ChromeOptions ops = new ChromeOptions();
+                ops.addArguments("--no-sandbox"); // lines 36 and 37 were implemented due to bug in selenium and will be remover
+                // they are basically useless
+                ops.addArguments("--remote-allow-origins=*");
+                if (ConfigReader.getPropertyValue("Headless").equals("true")) {
+                    ops.addArguments("--headless=new");
+                }
+                driver = new ChromeDriver(ops);
                 break;
 
             case "Firefox":
